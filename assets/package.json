@@ -13,7 +13,7 @@
     "themes"
   ],
   "author": "Leinerke Suarez",
-  "license": "ISC",
+  "license": "GNU",
   "private": true,
   "browserslist": [
     "defaults"
