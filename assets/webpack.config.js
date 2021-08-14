@@ -6,6 +6,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
+
 // JS Directory path.
 const JS_DIR = path.resolve(__dirname, "src/js");
 const SASS_DIR = path.resolve(__dirname, "src/sass");
@@ -44,7 +45,7 @@ const rules = [
         test: /\.scss$/i,
         include: [SASS_DIR],
         exclude: /node_modules/,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+        use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader", "sass-loader"],
     },
     {
         test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
